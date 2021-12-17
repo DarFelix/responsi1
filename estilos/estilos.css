@@ -1,0 +1,423 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:100%;
+    min-height: 100%;
+
+
+}
+
+.grid-container > * {
+    text-align: center;
+    border-radius: 0;
+
+}
+
+.inicio{
+    grid-area: inicio;
+    background-color: lightgray;
+
+}
+
+.iniciop{
+    grid-area: iniciop;
+    background-color: #F4F6F6;
+    justify-content: space-between;
+
+}
+
+
+
+.iniciop-menu{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    margin: 10px 30px auto auto;
+    gap: 30px;
+    font-size: 1px;
+
+}
+
+
+
+
+
+.logo{
+    grid-area: logo;
+    background-color: #F4F6F6;
+    padding: 0 40 px;
+    line-height: 80px;
+
+}
+
+
+/* estilos barra navegacion  */
+.navbar{
+    grid-area:navbar;
+    background-color: #F4F6F6;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-link{
+    color:black;
+    text-decoration: none;
+}
+
+.nav-menu{
+    display: flex;
+    list-style: none;
+    margin: auto;
+}
+
+.nav-menu-item{
+    font-size: 12px;
+    font-weight: bold;
+    margin:15px 2px;
+    line-height: 30px;
+    text-transform: uppercase;
+    width: max-content;
+    border: 1px solid #000000;
+    border-radius: 10%;
+
+
+}
+
+.nav-menu-link{
+    padding: 4px 10px;
+    border-radius:1px;
+    box-shadow: 0 8px 16px 0 rgba(187, 183, 183, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.nav-menu-link:hover{
+    background-color: gray;
+    transition:0.5s;
+
+}
+
+
+.imagen{
+    grid-area:imagen;
+    background-color: rgb(144, 176, 206);
+}
+
+/* estilos info1 */
+
+.info1{
+    grid-area:info1;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    color:white;
+    font-size: 1em;
+}
+
+a{
+    color:rgb(169, 197, 240);
+  }
+
+  a:hover{
+    color: white;
+  }
+
+  a:active{
+    color: palevioletred;
+  }
+
+
+/* termina estilos info1 */
+
+/* estilo tarjetas */
+
+.cards{
+    grid-area:cards;
+    background-color:rgb(12, 40, 99);
+    display:flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+
+}
+
+.card-body{
+
+    border-right: 1px solid rgb(2, 16, 46);
+    overflow: auto;
+    margin: 20 px;
+    text-align: left;
+    padding: 0 10px;
+    color: white;
+
+}
+
+.btn{
+    float: right;
+    border-radius: 8px;
+    border: 2px solid #676967;
+    background-color: darkgray;
+    margin: 25px;
+    padding: 5px;
+}
+
+.btn-primary{
+    color:black;
+}
+
+
+
+/* termina estilo tarjetas */
+
+
+/* inicia estilos info2 */
+.info2{
+    grid-area: info2;
+    background-color: #F4F6F6;
+    overflow: auto;
+    margin: 20 px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.info-cuerpo{
+    font-weight: bold;
+}
+
+
+.enlace-info2{
+    color:black;
+    font-weight: bolder;
+    float: right;
+
+}
+
+.enlace-info2:hover{
+    color:#676967;
+}
+
+/* termina estilos info2 */
+
+/* inicia estilos eventos */
+
+.eventos{
+    grid-area: eventos;
+    background-color: #F4F6F6;
+    overflow: auto;
+    border-left: 1px solid gray;
+    margin: 20 px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.enlace-eventos{
+    color:rgb(12, 19, 82);
+    font-weight: bolder;
+
+}
+
+.enlace-eventos:hover{
+    color:#676967;
+}
+
+.info-eventos{
+    color:rgb(12, 19, 82);
+}
+
+/* termina estilos eventos */
+
+/* inicia estilos pie */
+
+.pie{
+    grid-area: pie;
+    background-color: #F4F6F6;
+    border-top: 1px solid gray;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.enlace-pie{
+    color:rgb(12, 19, 82);
+}
+
+.enlace-pie:hover{
+    color:#676967;
+}
+
+
+/* menu hamburguesa */
+
+.nav-toggle{
+    color: black;
+    background: none;
+    border: none;
+    font-size:100%;
+    padding: 35px 20px 0 0;
+    line-height: 100%;
+    display:none;
+    float:right;
+    cursor: pointer;
+
+
+}
+
+
+
+
+
+
+.grid-container{
+
+
+
+    display: grid;
+    gap:0;
+    grid-template:
+    "inicio" 1%
+    "iniciop" 2%
+    "logo" 8%
+    "imagen" 24%
+    "info1" 15%
+    "cards" 19%
+    "info2" 15%
+    "eventos" 15%
+    "pie" 2% /
+    100%
+    ;
+
+
+}
+
+
+
+
+
+
+
+@media (min-width: 650px) {
+    .grid-container{
+        
+
+        grid-template:
+        "inicio inicio" 2%
+        "iniciop iniciop" 3%
+        "logo navbar " 15%
+        "imagen cards" 20%
+        "info1  cards" 20%
+        "info2  eventos" 40%
+        "pie    pie" 3% /
+        35% 65%
+        ;
+    }
+
+   
+   
+}
+
+
+
+@media (min-width: 900px) {
+    .grid-container{
+
+        border-style: none;
+        background: white;
+        margin: 0 15% 0 15%;
+
+        grid-template:
+        "inicio inicio inicio" 2%
+        "iniciop iniciop iniciop" 4%
+        "logo navbar navbar" 13%
+        "imagen info1 info1" 35%
+        "cards cards cards" 20%
+        "info2 info2 eventos" 31%
+        "pie   pie   pie" 4% /
+        33% auto 33%
+        ;
+    }
+}
+
+
+@media(max-width: 650px){
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(54, 68, 88);
+        position: fixed;
+        top: 26%;
+        width: 100%;
+        padding: 15px 0;
+        height: 100%;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item{
+        line-height: 70px;
+        border: none;
+    }
+
+    .nav-menu-link:hover{
+        background-color: rgb(106, 102, 163);
+        transition:0.5s;
+
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;    
+        
+    }
+
+    .eventos{    
+        border-top: 1px solid gray;   
+    }
+
+   .logo{
+       position: fixed;
+   }
+   
+
+    
+   .info1{
+    position: static;
+}
+
+.centrado{
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    color:white;
+    
+}
+
+.ima-card{
+    display: none;
+}
+
+
+
+}
+
+
+
